@@ -1,0 +1,49 @@
+p.header {
+	font-size: small;
+}
+p.header span {
+	font-weight: bold;
+}
+p.footer {
+	font-size: x-small;
+}
+div.content {
+	margin: auto;
+	width: 95%;
+	height:auto;
+}
+div.broken,
+div.missing {
+	margin: auto;
+	position: relative;
+	top: 50%;
+	width: 50%;
+	height: 50%;
+	text-align: center;
+}
+div.missing p {
+	padding: 15% 0;
+}
+div.broken a,
+div.missing a {
+	height: 63px;
+	position: relative;
+	top: -31px;
+}
+div.broken img,
+div.missing img {
+	border-width: 0px;
+}
+div.broken {
+	display: none;
+}
+div#unityPlayer {
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+}
+embed {
+	width:100% !important;
+	height: auto;
+	margin: auto;
+}

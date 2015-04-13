@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Unity Web Player | PointAndClickJs</title>
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/global-unity.css" />
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: window.innerWidth,
+				height: window.innerHeight-(window.innerHeight*.1),
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "point&click-example.unity3d");
+			});
+		-->
+		</script>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="index.html"><h2>Amy Li</h2></a>
+			</div>
+			<div class="social-media-links">
+				<a href="https://www.linkedin.com/in/amylinow"><img src="images/linkedin.png"></a><!-- linkedin -->
+				<a href="https://github.com/amylinow"><img src="images/github.jpg"></a><!-- github -->
+			</div>
+		</header>
+		<div class="content">
+			<p>This is and example of the Point & Click game. Description: Students re-create this Point & Click game along with the instructors. Upon completion, students will re-imagine/change the game based on this template in a week long challenge. See my re-imagined game <a href="heart_breaker.html">here</a>.</p>
+			<div id="unityPlayer">
+				<div class="missing">
+					<p>Hello! Unity Web Player may not work if you are using Chrome, try running this on Firefox. Otherwise download the Unity Web Player Plugin from the link below.</p>
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

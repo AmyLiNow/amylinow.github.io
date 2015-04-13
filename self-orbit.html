@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Amy's Self Orbit</title>
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/self-orbit-styles.css">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css">
+		<script type="text/javascript">
+			function changeText(text) {
+				var display = document.getElementById('text-display');
+				display.innerHTML = text;
+			}
+			function defaultText() {
+				var display = document.getElementById('text-display');
+				display.innerHTML = "";
+			}
+		</script>
+	</head>	
+	<body>
+		<header>
+			<div class="logo">
+				<a href="index.html"><h2>Amy Li</h2></a>
+			</div>
+			<div class="social-media-links">
+				<a href="https://www.linkedin.com/in/amylinow"><img src="images/linkedin.png"></a><!-- linkedin -->
+				<a href="https://github.com/amylinow"><img src="images/github.jpg"></a><!-- github -->
+			</div>
+		</header>
+		<div class="container">
+			<div class="description">
+				<p>Hello! This is an instructor example of the "self orbit activity" made for G:url Gaming, an aftershool game design program offered at <a href="http://bavc.org" target="blank">BAVC</a> . This self-orbit goal is to get students acquainted with coding in HTML, CSS and JavaScript and to express themselves. To learn more about BAVC youth programs go to <a href="http://bavc.org/nextgen" target="blank">bavc.org/nextgen</a>. </p>
+				<p>Hover over each image to get to know a bit about me :)</p>
+			</div>
+
+			<div id="text-display"></div>
+
+			<div id="circle-container">
+
+				<a href='#' id='center'><img src='images/amy.jpg' onmouseover="changeText('This is me, Amy Li.')" onmouseout="defaultText()"></a> 
+				<a href='#' id='deg0'><img src='images/curiosity.png' onmouseover="changeText('Spirited Curiosity')" onmouseout="defaultText()"/></a>
+				<a href='#' id='deg45'><img src='images/rational.png' onmouseover="changeText('Cool Rationalism')" onmouseout="defaultText()"/></a>
+				<a href='#' id='deg135'><img src='images/maker.png' onmouseover="changeText('Explorative Maker')" onmouseout="defaultText()"/></a>
+				<a href='#' id='deg180'><img src='images/troubleshoot.png' onmouseover="changeText('Troubleshooter')" onmouseout="defaultText()"/></a>
+				<a href='#' id='deg225'><img src='images/calm.png' onmouseover="changeText('Calm')" onmouseout="defaultText()"/></a>
+				<a href='#' id='deg315'><img src='images/change.png' onmouseover="changeText('Connecting and Changing')" onmouseout="defaultText()"/></a>
+			</div>
+
+		</div>
+	</body>
+</html>
