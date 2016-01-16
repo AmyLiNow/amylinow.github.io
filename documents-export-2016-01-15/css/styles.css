@@ -1,24 +1,11 @@
 
-
-/* original body styles*/
-/*body {
+body {
   text-align: center;
-  background: url("../img/ggb-background.jpg");
+  background: url("../img/white-background.png");
   background-size: cover;
   background-position: center;
   color: darkblue;
   font-family: helvetica;
-}*/
-
-body {
-  text-align: center;
-  color: darkblue;
-  font-family: helvetica;
-  background: url(../img/ggb-background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 p {
