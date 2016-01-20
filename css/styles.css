@@ -10,15 +10,26 @@
   font-family: helvetica;
 }*/
 
-body {
-  text-align: center;
-  color: darkblue;
-  font-family: helvetica;
+html {
+  
   background: url(../img/ggb-background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+}
+
+body {
+  text-align: center;
+  color: darkblue;
+  font-family: helvetica;
+}
+
+/* container id to control the with of our content not background*/
+#container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 p {
@@ -46,8 +57,3 @@ ul {
 
 }
 
-/* container id to control the with of our content not background*/
-#container {
-  width: 90%;
-  margin: 0 auto;
-}
