@@ -1,13 +1,17 @@
 html {
-  overflow: hidden;
-  max-width: 500px;
+  overflow-x: hidden;
+  max-width: 100%;
+  max-height: 1000px;
+  text-align: center;
 }
 
 
 /* entire robot*/
 .robot {
-  position: relative;
-  left: 200px;
+  /*position: relative;*/
+  /*left: 200px;*/
+  width: 250px;
+  margin: 0 auto;
 }
 
 /* antenna thingy */
@@ -125,26 +129,33 @@ html {
 @keyframes dance {
  from {
   left: 800px;
+  bottom: 0px;
  }
 }
 
 @-webkit-keyframes dance {
  from {
   left: 800px;
+  bottom: 0px;
  }
 }
 
 @-moz-keyframes dance {
  from {
   left: 800px;
+  bottom: 0px;
  }
 }
 
 .dancing {
+  max-height: 1000px;
   animation: dance 4s infinite;
   -webkit-animation: dance 4s infinite;
   -moz-animation: dance 4s infinite;
-  position: absolute;
-  top: 550px; 
-  left: 400px;
+  position:  relative;
+  left: 10px;
+  /*position: absolute;*/
+  /*top: 550px;*/ 
+  /*bottom: 0px; no margin to the bottom of page
+  left: 300px;*/
 }
