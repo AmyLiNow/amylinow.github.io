@@ -28,19 +28,19 @@ html {
 /* keyframes that help with the blink animation */
 @keyframes blink {
   50% {
-    background: radial-gradient(circle, hotpink 15%, transparent 40%), #cc5;
+    background: radial-gradient(circle, hotpink 15%, transparent 40%), grey;
     background-size: 75px 150px;
   }
 }
 @-webkit-keyframes blink {
   50% {
-    background: -webkit-radial-gradient(circle, hotpink 15%, transparent 40%), #cc5;
+    background: -webkit-radial-gradient(circle, hotpink 15%, transparent 40%), grey;
     background-size: 75px 150px;
   }
 }
 @-moz-keyframes blink {
   50% {
-    background: -moz-radial-gradient(circle, hotpink 15%, transparent 40%), #cc5;
+    background: -moz-radial-gradient(circle, hotpink 15%, transparent 40%), grey;
     background-size: 75px 150px;
   }
 }
