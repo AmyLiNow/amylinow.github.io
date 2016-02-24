@@ -1,0 +1,3 @@
+[submodule "we-can-do-it"]
+	path = we-can-do-it
+	url = https://github.com/amylinow/we-can-do-it
