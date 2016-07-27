@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Amy Li's Login Code Sample</title>
+    <style media="screen">
+      body {
+        font-family: sans-serif;
+
+      }
+        #login-form {
+          text-align: center;
+          padding:0;
+          margin:0;
+          border:0;
+          width: 200px;
+        }
+        /* styles for both username and password input elements*/
+        #login-form  input#username, #login-form  input#password {
+          padding: 5px;
+          margin: 5px 0px;
+          width:100px;
+        }
+        /* styles for password input alignment */
+        #login-form input#password  {
+          margin-left: 4px;
+          width:100px;
+        }
+        /*sstyle for login-button*/
+        #login-form input#login-button    {
+          padding: 5px;
+          width: 50%;
+          /*margin: 10px 50px 0px;*/
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- method post for passwords -->
+      <form id="login-form" method="post" action="#">
+        <h1>Login</h1>
+          <label accesskey="u" for="username">Username</label>
+          <input id="username" type="text" maxlength="255" placeholder="username" />
+          <br>
+          <label accesskey="p" for="password">Password</label>
+          <input id="password" type="password" maxlength="10" placeholder="********" />
+          <br>
+          <input id="login-button"  type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
