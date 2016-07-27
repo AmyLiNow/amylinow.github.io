@@ -1,9 +1,9 @@
- /* 
+ /*
 
 	Description: script to generate greeting based on time of day
 	and to get the time and date of users browser and display on the webpage
 
- */ 
+ */
 
 
 
@@ -45,9 +45,9 @@ var updateClock = function() {
 	var currentTime = new Date();
 	//alert(currentTime); // example output Mon Feb 22 2016 17:25:22 GMT-0800 (PST)
 
-	var currentHours24 = currentTime.getHours(); //get hours from Date() 
+	var currentHours24 = currentTime.getHours(); //get hours from Date()
 	// console.log("hours: "+currentHours24);
-	var currentMinutes = currentTime.getMinutes(); 
+	var currentMinutes = currentTime.getMinutes();
 	// console.log("minutes: "+currentMinutes);
 	var currentSeconds = currentTime.getSeconds();
 
@@ -55,7 +55,7 @@ var updateClock = function() {
 	var amOrPm = ( currentHours24 < 12 ) ? "AM" : "PM" ;
 
 	// if the hour is more than 12 substract 12 to convert to 12 hour clock  otherwise keep the time
-	var currentHours12 = ( currentHours24 > 12 ) ? currentHours24-12 : currentHours12 ;
+	var currentHours12 = ( currentHours24 > 12 ) ? currentHours24-12 : currentHours24 ;
 
 	// convert hour 0 to 12
 	currentHours12 = ( currentHours12 == 0 ) ? 12 : currentHours12;
@@ -70,4 +70,3 @@ var updateClock = function() {
 	document.getElementById("clock").innerHTML = currentTimeString;
 
 }
-
